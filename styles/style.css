@@ -1,8 +1,22 @@
+/* Fonts */
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/Archivo/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Archivo1';
+  src: url('/fonts/Archivo/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lato', 'Arial', sans-serif;
   }
   
   /* HEADINGS */
@@ -11,10 +25,12 @@
     color: #fff;
     text-align: center;
     line-height: 1.4;
+    font-family: 'Archivo1', sans-serif;
   }
   
   h1 {
     font-size: 2.2rem;
+    font-family: 'Archivo', sans-serif;
   }
   
   h2 {
@@ -58,8 +74,9 @@
     align-items: center;
     height: 50px;
     overflow: hidden;
+    /* background-color: rgb(56, 56, 56); */
   }
-  
+
   .navbar img {
     height: 16px;
     width: auto;
@@ -81,10 +98,12 @@
     font-weight: 400;
     text-decoration: none;
     transition: color 0.3s ease-out;
+    font-weight: bolder;
   }
   
   .nav-item a:hover {
-    color: #3498db;
+    color: #2694dd;
+    
   }
   
   /* SECTIONS */
@@ -100,13 +119,17 @@
     justify-content: center;
   }
   
-  .features {
+  .group {
     width: 100%;
     height: auto;
     background-color: #f1f1f1;
     display: flex;
     padding: 50px 20px;
     justify-content: space-around;
+  }
+
+  .group:nth-child(odd) {
+    background-color: rgb(216, 216, 216);
   }
   
   .feature-container {
@@ -191,6 +214,7 @@
     margin-right: 25px;
     display: none;
   }
+  
   
   .menu-toggle:hover{
     cursor: pointer;
@@ -300,8 +324,8 @@
       margin-top: 50px;
     }
 
-    .navbar li:last-child {
-        margin-top: 200px;
+    .navbar .nav-opt {
+        margin-top: 100%;
       }
     
     .navbar li a {
