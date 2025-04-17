@@ -27,8 +27,7 @@ function toggleTheme() {
   const newTheme = current === "dark" ? "light" : "dark";
   document.documentElement.setAttribute("data-theme", newTheme);
   localStorage.setItem("theme", newTheme);
-  console.log('Theme applied');
-  
+  console.log("Theme applied");
 }
 
 $(document).ready(function () {
