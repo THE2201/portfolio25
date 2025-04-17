@@ -13,10 +13,27 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Pacifico';
+  src: url('/fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
 * {
+    font-family: 'Archivo1', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: default;
+    scroll-behavior: smooth;
+  }
+
+  a{
+    text-decoration: none;
+  }
+  a:visited{
+    color: transparent;
   }
   
   /* HEADINGS */
@@ -24,13 +41,13 @@
   h1, p {
     color: #fff;
     text-align: center;
-    line-height: 1.4;
+    line-height: 1.5;
     font-family: 'Archivo1', sans-serif;
   }
   
   h1 {
     font-size: 2.2rem;
-    font-family: 'Archivo', sans-serif;
+    /* font-family: 'Archivo', sans-serif; */
   }
   
   h2 {
@@ -72,17 +89,65 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
     align-items: center;
-    height: 50px;
+    /* height: 50px; */
     overflow: hidden;
     /* background-color: rgb(56, 56, 56); */
   }
 
-  .navbar img {
-    height: 16px;
-    width: auto;
-    justify-self: start;
-    margin-left: 20px;
+  .navbar .nav-title {
+    color: black;
+    /* font-family: "Pacifico" !important; */
+    /* margin-left: 0px; */
+    padding: 5px;
+
+    /* margin-bottom: 25px; */
   }
+  /* .navbar .nav-title:hover {
+    color: red;
+
+  } */
+
+  .nav-title span {
+    display: inline;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Base hover style - triggers only when hovering the entire title */
+  .nav-title:hover span {
+    background-color: rgb(100, 180, 220);
+    border-radius: 2px;
+  }
+  
+
+  /* Delays to make the background change one letter after another */
+  .nav-title:hover span:nth-child(1) {
+    transition-delay: 0s;
+  }
+  .nav-title:hover span:nth-child(2) {
+    transition-delay: 0.1s;
+  }
+  .nav-title:hover span:nth-child(3) {
+    transition-delay: 0.2s;
+  }
+  .nav-title:hover span:nth-child(4) {
+    transition-delay: 0.3s;
+  }
+  .nav-title:hover span:nth-child(5) {
+    transition-delay: 0.4s;
+  }
+  .nav-title:hover span:nth-child(6) {
+    transition-delay: 0.5s;
+  }
+  .nav-title:hover span:nth-child(7) {
+    transition-delay: 0.6s;
+  }
+  .nav-title:hover span:nth-child(8) {
+    transition-delay: 0.7s;
+  }
+  .nav-title:hover span:nth-child(9) {
+    transition-delay: 0.8s;
+  }
+  
   
   .navbar ul {
     list-style: none;
@@ -128,10 +193,46 @@
     justify-content: space-around;
   }
 
+  .footer {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: auto;
+
+    background-color: #484848;
+    display: flex;
+    padding: 40px;
+    justify-content: space-around;
+    
+  }
+  .footer h2, .footer p, .footer a {
+    color: white;
+    
+  }
+  .footer-container {
+    flex-basis: 30%;
+    margin-top: 20px;
+  }
+  .footer-container p{
+    text-align: left;
+    padding: 4px;
+  }
+
   .group:nth-child(odd) {
     background-color: rgb(216, 216, 216);
   }
   
+  .about-container {
+    flex-basis: 90%;
+    /* margin-top: 10px; */
+  }
+
+  .about-container p {
+    color: #000;
+    /* text-align: center; */
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
   .feature-container {
     flex-basis: 30%;
     margin-top: 10px;
@@ -191,7 +292,7 @@
   
   input {
     border: 0;
-    border-left: 1px solid #ccc;
+    border-left: 1px solid #cccccc;
     border-radius: 0; /* FOR SAFARI */
     outline: 0;
     padding: 5px;
@@ -303,21 +404,23 @@
     /* MOBILE NAVIGATION */
        
     .navbar ul {
+      /* text-align: left; */
       display: flex;
       flex-direction: column;
       position: fixed;
       justify-content: start;
       top: 55px;
-      background-color: #ffffffa7;
+      background-color: #ffffffe2;
       width: 60%;
       height: calc(100vh - 55px);
       transform: translate(100%);
-      text-align: center;
+      /* text-align: ; */
       overflow: hidden;
     }
     
     .navbar li {
       padding: 15px;
+      
     }
     
     .navbar li:first-child {
@@ -369,4 +472,17 @@
     display: none;
    }
     
+  }
+
+  @media (prefers-color-scheme: dark) {
+    
+    .nav-wrapper {
+      background-color: rgb(79, 77, 77);
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    
+    .nav-wrapper {
+      background-color: rgb(242, 242, 242);
+    }
   }
