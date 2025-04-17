@@ -109,12 +109,13 @@
 
   .nav-title span {
     display: inline;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
   }
   
   /* Base hover style - triggers only when hovering the entire title */
   .nav-title:hover span {
-    background-color: rgb(100, 180, 220);
+    /* background-color: rgb(100, 180, 220); */
+    color: rgb(100, 180, 220);
     border-radius: 2px;
   }
   
@@ -124,7 +125,7 @@
     transition-delay: 0s;
   }
   .nav-title:hover span:nth-child(2) {
-    transition-delay: 0.1s;
+    transition-delay: 1.5s;
   }
   .nav-title:hover span:nth-child(3) {
     transition-delay: 0.2s;
@@ -136,7 +137,7 @@
     transition-delay: 0.4s;
   }
   .nav-title:hover span:nth-child(6) {
-    transition-delay: 0.5s;
+    transition-delay: 1.6s;
   }
   .nav-title:hover span:nth-child(7) {
     transition-delay: 0.6s;
@@ -145,7 +146,7 @@
     transition-delay: 0.7s;
   }
   .nav-title:hover span:nth-child(9) {
-    transition-delay: 0.8s;
+    transition-delay: 1.7s;
   }
   
   
@@ -477,10 +478,10 @@
   @media (prefers-color-scheme: dark) {
     
     .nav-wrapper {
-      background-color: rgb(79, 77, 77);
+      background-color: rgb(80, 80, 80);
     }
     .navbar ul {
-      background-color: rgba(79, 77, 77, 0.9);
+      background-color: rgba(80, 80, 80, 0.9);
     }
     .nav-item a {
       color: #ffffff;
@@ -502,4 +503,22 @@
     .nav-wrapper {
       background-color: rgb(242, 242, 242);
     }
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;       /* Vertical scrollbar width */
+    height: 10px;      /* Horizontal scrollbar height */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgb(80, 80, 80);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(152, 152, 152);
   }
