@@ -2,8 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Portfolio 25 | Abel</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="styles/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link
@@ -11,60 +15,86 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <script src="js/main.js" defer></script>
+
   </head>
   <body>
     <div class="page-wrapper">
       <div class="nav-wrapper">
-        <div class="grad-bar"></div>
         <nav class="navbar">
           <a href="index.html">
             <h1 class="nav-title">
+              <span><i class="fa-solid fa-code"></i></span> 
               <span>P</span><span>o</span><span>r</span><span>t</span
-              ><span>f</span><span>o</span><span>l</span><span>i</span
-              ><span>o</span>
-            </h1>
-          </a>
-          <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-          <ul class="nav no-search">
+                ><span>f</span><span>o</span><span>l</span><span>i</span
+                  ><span>o</span>
+                </h1>
+              </a>
+              <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+              <ul class="nav">
+                <li class="nav-item">
+                  <a href="#home">
+                    <i class="fa-solid fa-house"></i>
+                    <span data-en="Home" data-es="Inicio"></span
+                      ></a>
+                    </li>
             <li class="nav-item">
-              <a href="#"> <i class="fa-solid fa-house"></i> Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#"> <i class="fa-solid fa-user-tie"></i> About</a>
+              <a href="#">
+                <i class="fa-solid fa-user-tie"></i>
+                <span data-en="About" data-es="Acerca de"></span
+              ></a>
             </li>
             <li class="nav-item">
               <a href="projects.html" target="_self">
-                <i class="fa-solid fa-clipboard-check"></i> Projects</a
-              >
+                <i class="fa-solid fa-clipboard-check"></i>
+                <span data-en="Projects" data-es="Proyectos"></span
+              ></a>
             </li>
             <li class="nav-item nav-opt">
-              <a href="#"> <i class="fa-solid fa-language"></i> English</a>
+              <a onclick="toggleLanguage()">
+                <i class="fa-solid fa-language"></i>
+                <span class="langSwitch" data-en="English" data-es="Español">
+                </span>
+              </a>
             </li>
             <li class="nav-item">
               <a onclick="toggleTheme()">
-                <i class="fa-solid fa-sun"></i
-                ><i class="fa-solid fa-moon"></i> Light Theme</a
-              >
+                <!-- <i class="fa-solid fa-sun"></i>  -->
+                <span id="themeLabel"
+                  >
+                  <i class="fa-solid fa-wand-magic-sparkles"></i><i class="fa-solid fa-moon"></i>
+                  <i class="fa-solid fa-toggle-off"></i> </span
+              ></a>
             </li>
           </ul>
         </nav>
+        <div class="grad-bar"></div>
+        
       </div>
       <section class="headline" id="home">
-        <h1>Abel Ernesto</h1>
-        <p>IT Journey simple, straight, steadfast...</p>
+        <div class="containerTw">
+          <h1 class="typewriterEffect">Abel Ernesto</h1>
+          <p style="color: white;"
+            data-en="IT Journey simple, straight, steadfast..."
+            data-es="Portafolio simple, directo al grano con puntos relevantes"
+          ></p>
+        </div>
       </section>
       <section class="group">
-        <div class="about-container">
-          <h2>Whoami</h2>
-          <p>
-            Not codehead honestly, I look at code as a stream to provide
-            solutions and make things running at the workplace, IT engineer, but
+        <div class="about-container" >
+          <h2 data-en="Whoami" data-es="Este soy yo">Whoami</h2>
+          <p abbr="Wood bg cuz i like it"
+            data-en="Let's code to connect, IT engineer, but
             besides degree, passion in IT is cloud computing, web, and database
-            management. Communication is key, more of a social instead of a geek, not losing focus.
+            management. Communication is key, more of a social instead of a
+            geek, not losing focus." 
+            data-es="Veamos el codigo como una herramienta
+            para conectar y dar soluciones, Ingeniero en sistemas con enfoque enfoque
+            en computacion en la nube, desarrollo web, y bases de datos. La comunicacion es importante, 
+            probablemente aun mas que todo conocimiento tecnico que se aprende en el camino, podemos crear!">   
           </p>
         </div>
       </section>
@@ -144,17 +174,26 @@
 
       <section class="footer">
         <div class="footer-container">
-          <h2>Social Links</h2>
+          <h2 data-en="Social Links" data-es="Enlaces sociales"></h2>
 
-          <p><i class="fa-solid fa-users-viewfinder"></i> Facebook</p>
-          <p><i class="fa-solid fa-square-phone"></i> Whatsapp</p>
-          <p><i class="fa-solid fa-suitcase"></i> LinkedIn</p>
-          <p><i class="fa-solid fa-file-code"></i> Github</p>
-          <p><i class="fa-solid fa-envelope"></i> Email</p>
+          <p>
+            <a href=""><i class="fa-solid fa-square-phone"></i> Whatsapp</a>
+          </p>
+          <p>
+            <a href="https://www.linkedin.com/in/abel-ernesto-s" target="fLinked"
+              ><i class="fa-solid fa-suitcase"></i> LinkedIn</a
+            >
+          </p>
+          <p>
+            <a href=""><i class="fa-solid fa-file-code"></i> Github</a>
+          </p>
+          <p>
+            <a href=""><i class="fa-solid fa-envelope"></i> Email</a>
+          </p>
         </div>
 
         <div class="footer-container">
-          <h2>Navigation</h2>
+          <h2 data-en="Navigation" data-es="Nagevacion"></h2>
           <p><a href="#home">Home</a></p>
           <p><a href="projects.html" target="_self">Projects</a></p>
           <p><a href="#home">Badges</a></p>
@@ -166,7 +205,7 @@
         </div>
       </section>
     </div>
-    <section class="footer" style="padding: 0; margin: 0; border-radius: 0">
+    <section class="footer">
       <div>
         <h2>Portafolio Web Abel Ernesto &copy; 2025</h2>
       </div>
