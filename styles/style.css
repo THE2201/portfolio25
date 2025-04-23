@@ -21,17 +21,34 @@
 }
 
 :root {
-  --light-color: whitesmoke;
-  --dark-color: rgb(30, 30, 30);
-  --dark-brown-color: #1c0e06;
-
-  --accent-color: #e74c3c;
-  --accent-color: #e74c3c;
+  /* --light-color: whitesmoke; */
+  /* --dark-color: rgb(30, 30, 30); */
+  /* --dark-brown-color: #1a0e08; */
 
   --footer-color: rgb(30, 30, 30);
 
-  --groupodd-color: rgb(64, 64, 64);
-  --groupev-color: rgb(140, 140, 140);
+  --groupodd-color-d: rgb(64, 64, 64);
+  --groupev-color-d: rgb(140, 140, 140);
+
+  --groupodd-color-l: white;
+  --groupev-color-l: rgb(230, 230, 230);
+
+
+  --l-color-bg: rgb(255, 255, 255);
+  --l-color-surface: rgb(245, 245, 245);
+  --l-color-text-primary: rgb(30, 30, 30);
+  --l-color-text-secondary: rgb(100, 100, 100);
+  --l-color-accent: rgb(0, 120, 212);
+  --l-color-error: rgb(220, 38, 38);
+  --l-color-border: rgb(220, 220, 220);
+
+  --d-color-bg: rgb(18, 18, 18);
+  --d-color-surface: rgb(28, 28, 30);
+  --d-color-text-primary: rgb(255, 255, 255);
+  --d-color-text-secondary: rgb(180, 180, 180);
+  --d-color-accent: rgb(100, 180, 255);
+  --d-color-error: rgb(255, 87, 87);
+  --d-color-border: rgb(60, 60, 60);
   
 
   /* --overlay-gradient: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)); */
@@ -132,7 +149,8 @@
   .grad-bar {
     width: 100%;
     height: 5px;
-    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    /* background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB); */
+    background: linear-gradient(-45deg, #EE7752, #8a3003, #63620d, #402d01);
     background-size: 400% 400%;
         -webkit-animation: gradbar 15s ease infinite;
       -moz-animation: gradbar 15s ease infinite;
@@ -574,51 +592,51 @@
 
  /* DARK THEME OVERRIDES */
 [data-theme="dark"] .nav-wrapper {
-  background-color: var(--dark-brown-color);
+  background-color: var(--d-color-surface);
 }
 [data-theme="dark"] .navbar ul {
-  background-color: var(--dark-brown-color);
+  background-color: var(--d-color-surface);
 }
 [data-theme="dark"] .nav-item a {
-  color: var(--light-color);
+  color: var(--l-color-bg);
 }
 [data-theme="dark"] .navbar .nav-title {
-  color: var(--light-color);
+  color: var(--l-color-bg);
 }
 [data-theme="dark"] .menu-toggle .bar {
-  background-color: var(--light-color);
+  background-color: var(--l-color-bg);
 }
 
 [data-theme="dark"] .group:nth-child(odd) {
-  background-color: rgb(64, 64, 64);
+  background-color: var(--d-color-surface);
 }
 
 [data-theme="dark"] .group:nth-child(even) {
-  background-color: rgb(140, 140, 140);
+  background-color: var(--d-color-bg);
 }
 
 
 
 /* white */
 [data-theme="light"] .group:nth-child(odd) {
-  background-color: white;
+  background-color: var(--l-color-bg);
 }
 
 [data-theme="light"] .group:nth-child(even) {
-  background-color: rgb(239, 239, 239);
+  background-color: var(--l-color-surface);
 }
 
 /* fonts  */
 [data-theme="dark"] .group,
 [data-theme="dark"] .group *,
 [data-theme="dark"] p {
-  color: white;
+  color: var(--d-color-text-primary);
 }
 
 [data-theme="light"] .group,
 [data-theme="light"] .group *,
 [data-theme="light"] p {
-  color: black;
+  color: var(--l-color-text-primary);
 }
 
 
@@ -626,19 +644,19 @@
 
 /* LIGHT THEME OVERRIDES */
 [data-theme="light"] .nav-wrapper {
-  background-color: white;
+  background-color: var(--l-color-bg);
 }
 [data-theme="light"] .navbar ul {
-  background-color: white;
+  background-color: var(--l-color-bg);
 }
 [data-theme="light"] .nav-item a {
-  color: black;
+  color: var(--l-color-text-primary);
 }
 [data-theme="light"] .navbar .nav-title {
-  color: black;
+  color: var(--l-color-text-primary);
 }
 [data-theme="light"] .menu-toggle .bar {
-  background-color: black;
+  background-color: var(--d-color-bg);
 }
 
   ::-webkit-scrollbar {
@@ -651,10 +669,13 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: white;
-    border-radius: 5px;
+    background: var(--l-color-bg);
+    /* border-radius: 5px; */
   }
-
   ::-webkit-scrollbar-thumb:hover {
     background: rgb(152, 152, 152);
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: var(--d-color-surface);
   }
